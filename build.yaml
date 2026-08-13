@@ -2,3 +2,6 @@
 include:
   - board: nice_nano//zmk
     shield: pocketboard
+
+  - board: nice_nano//zmk
+    shield: tester_pro_micro
