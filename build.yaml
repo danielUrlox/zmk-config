@@ -1,0 +1,4 @@
+---
+include:
+  - board: nice_nano//zmk
+    shield: pocketboard
