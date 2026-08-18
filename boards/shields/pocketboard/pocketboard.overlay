@@ -8,10 +8,14 @@
 
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
-        diode-direction = "col2row";
 
         /*
-         * COLUMNAS DEFINITIVAS
+         * PRUEBA: diodos orientados FILA -> COLUMNA
+         */
+        diode-direction = "row2col";
+
+        /*
+         * COLUMNAS = ENTRADAS
          *
          * C1 = Pro Micro 4
          * C2 = Pro Micro 5
@@ -21,15 +25,15 @@
          * C6 = Pro Micro 9
          */
         col-gpios =
-            <&pro_micro 4 GPIO_ACTIVE_HIGH>,
-            <&pro_micro 5 GPIO_ACTIVE_HIGH>,
-            <&pro_micro 6 GPIO_ACTIVE_HIGH>,
-            <&pro_micro 10 GPIO_ACTIVE_HIGH>,
-            <&pro_micro 8 GPIO_ACTIVE_HIGH>,
-            <&pro_micro 9 GPIO_ACTIVE_HIGH>;
+            <&pro_micro 4  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+            <&pro_micro 5  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+            <&pro_micro 6  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+            <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+            <&pro_micro 8  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+            <&pro_micro 9  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
 
         /*
-         * FILAS DEFINITIVAS
+         * FILAS = SALIDAS
          *
          * R1 = Pro Micro 14
          * R2 = Pro Micro 15
@@ -37,10 +41,10 @@
          * R4 = Pro Micro 18
          */
         row-gpios =
-            <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-            <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-            <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-            <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+            <&pro_micro 14 GPIO_ACTIVE_HIGH>,
+            <&pro_micro 15 GPIO_ACTIVE_HIGH>,
+            <&pro_micro 16 GPIO_ACTIVE_HIGH>,
+            <&pro_micro 18 GPIO_ACTIVE_HIGH>;
     };
 
     default_transform: keymap_transform0 {
