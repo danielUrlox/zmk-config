@@ -45,4 +45,8 @@
             RC(3,2) RC(3,1) RC(3,0)
         >;
     };
+        wired_split {
+        compatible = "zmk,wired-split";
+        device = <&pro_micro_serial>;
+    };
 };

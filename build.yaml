@@ -1,7 +1,7 @@
 ---
 include:
   - board: nice_nano//zmk
-    shield: pocketboard
+    shield: pocketboard_left
 
   - board: nice_nano//zmk
-    shield: tester_pro_micro
+    shield: pocketboard_right
