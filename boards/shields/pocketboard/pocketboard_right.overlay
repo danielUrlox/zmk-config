@@ -50,3 +50,6 @@
         device = <&pro_micro_serial>;
     };
 };
+&pro_micro_serial {
+    status = "okay";
+};
