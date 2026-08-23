@@ -11,7 +11,17 @@
                 &kp A      &kp S      &kp D      &kp F      &kp G      &kp H
                 &kp Z      &kp X      &kp C      &kp V      &kp B      &kp N
 
-                &kp SPACE  &kp ENTER  &kp BSPC
+                &kp SPACE  &mo 1      &kp BSPC
+            >;
+        };
+
+        maintenance_layer {
+            bindings = <
+                &trans      &trans      &trans      &trans      &trans      &trans
+                &trans      &trans      &trans      &trans      &trans      &trans
+                &trans      &trans      &trans      &trans      &trans      &trans
+
+                &trans      &trans      &bootloader
             >;
         };
     };
