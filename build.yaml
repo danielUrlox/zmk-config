@@ -2,6 +2,3 @@
 include:
   - board: nice_nano//zmk
     shield: pocketboard_left
-
-  - board: nice_nano//zmk
-    shield: pocketboard_right
