@@ -128,26 +128,27 @@
      * ========================================================
      */
 
-    kscan_right: kscan_right {
-        compatible = "zmk,kscan-gpio-matrix";
+   kscan_right: kscan_right {
+    compatible = "zmk,kscan-gpio-matrix";
 
-        diode-direction = "col2row";
+    diode-direction = "col2row";
 
-        col-gpios =
-            <&mcp23017 0 GPIO_ACTIVE_HIGH>,
-            <&mcp23017 1 GPIO_ACTIVE_HIGH>,
-            <&mcp23017 2 GPIO_ACTIVE_HIGH>,
-            <&mcp23017 3 GPIO_ACTIVE_HIGH>,
-            <&mcp23017 4 GPIO_ACTIVE_HIGH>,
-            <&mcp23017 5 GPIO_ACTIVE_HIGH>;
+    poll-period-ms = <5>;
 
-        row-gpios =
-            <&mcp23017 8 GPIO_ACTIVE_HIGH>,
-            <&mcp23017 9 GPIO_ACTIVE_HIGH>,
-            <&mcp23017 10 GPIO_ACTIVE_HIGH>,
-            <&mcp23017 11 GPIO_ACTIVE_HIGH>;
-    };
+    col-gpios =
+        <&mcp23017 0 GPIO_ACTIVE_HIGH>,
+        <&mcp23017 1 GPIO_ACTIVE_HIGH>,
+        <&mcp23017 2 GPIO_ACTIVE_HIGH>,
+        <&mcp23017 3 GPIO_ACTIVE_HIGH>,
+        <&mcp23017 4 GPIO_ACTIVE_HIGH>,
+        <&mcp23017 5 GPIO_ACTIVE_HIGH>;
 
+    row-gpios =
+        <&mcp23017 8 GPIO_ACTIVE_HIGH>,
+        <&mcp23017 9 GPIO_ACTIVE_HIGH>,
+        <&mcp23017 10 GPIO_ACTIVE_HIGH>,
+        <&mcp23017 11 GPIO_ACTIVE_HIGH>;
+};
     /* ========================================================
      * MAPA 42 TECLAS
      * ========================================================
