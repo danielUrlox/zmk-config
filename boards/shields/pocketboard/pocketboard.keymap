@@ -7,37 +7,21 @@
 
         default_layer {
             bindings = <
-                /* IZQUIERDA */
                 &kp Q      &kp W      &kp E      &kp R      &kp T      &kp Y
                 &kp A      &kp S      &kp D      &kp F      &kp G      &kp H
                 &kp Z      &kp X      &kp C      &kp V      &kp B      &kp N
 
                 &kp SPACE  &mo 1      &kp BSPC
-
-                /* DERECHA - PRUEBA */
-                &kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &kp N6
-                &kp N7     &kp N8     &kp N9     &kp N0     &kp MINUS  &kp EQUAL
-                &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp HOME   &kp END
-
-                &kp ESC    &kp TAB    &kp DEL
             >;
         };
 
         maintenance_layer {
             bindings = <
-                /* IZQUIERDA */
-                &trans      &trans      &trans      &trans      &trans      &trans
-                &trans      &trans      &trans      &trans      &trans      &trans
-                &trans      &trans      &trans      &trans      &trans      &trans
+                &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans
 
-                &trans      &trans      &bootloader
-
-                /* DERECHA */
-                &trans      &trans      &trans      &trans      &trans      &trans
-                &trans      &trans      &trans      &trans      &trans      &trans
-                &trans      &trans      &trans      &trans      &trans      &trans
-
-                &trans      &trans      &trans
+                &trans &trans &bootloader
             >;
         };
     };
