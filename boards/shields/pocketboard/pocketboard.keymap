@@ -7,21 +7,17 @@
 
         default_layer {
             bindings = <
-                &kp Q      &kp W      &kp E      &kp R      &kp T      &kp Y
-                &kp A      &kp S      &kp D      &kp F      &kp G      &kp H
-                &kp Z      &kp X      &kp C      &kp V      &kp B      &kp N
+                /* FILA 1 */
+                &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6
 
-                &kp SPACE  &mo 1      &kp BSPC
-            >;
-        };
+                /* FILA 2 */
+                &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y
 
-        maintenance_layer {
-            bindings = <
-                &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans
+                /* FILA 3 */
+                &kp A  &kp S  &kp D  &kp F  &kp G  &kp H
 
-                &trans &trans &bootloader
+                /* 3 TECLAS INFERIORES */
+                &kp LEFT &kp DOWN &kp RIGHT
             >;
         };
     };
