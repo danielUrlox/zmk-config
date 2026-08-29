@@ -1,0 +1,9 @@
+menu "PocketBoard diagnostics"
+
+config POCKETBOARD_MCP_DIAG
+    bool "PocketBoard MCP23017 progressive matrix diagnostic"
+    default y
+    depends on GPIO
+    depends on I2C
+
+endmenu
