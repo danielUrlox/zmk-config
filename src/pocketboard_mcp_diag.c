@@ -28,7 +28,10 @@
 #include <zephyr/kernel.h>
 #include <zephyr/logging/log.h>
 
-#include <zmk/event_manager.hpp>
+#include <errno.h>
+#include <string.h>
+
+#include <zmk/event_manager.h>
 #include <zmk/events/position_state_changed.h>
 #include <zmk/events/keycode_state_changed.h>
 
