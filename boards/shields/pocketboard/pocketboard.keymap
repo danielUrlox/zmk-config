@@ -1,26 +1,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-
-/*
- * LEFT half remains usable for control.
- * The 3 keys in the short fourth row do NOT type anything:
- * pressing ANY one advances the MCP23017 diagnostic by one stage.
- *
- * Bootloader: press the two outer keys of the TOP row together.
- */
-
-/ {
-    keymap {
-        compatible = "zmk,keymap";
-
-        default_layer {
-            bindings = <
-                &kp Q &kp W &kp E &kp R &kp T &kp Y
-                &kp A &kp S &kp D &kp F &kp G &kp H
-                &kp Z &kp X &kp C &kp V &kp B &kp N
-
-                &none &none &none
-            >;
-        };
-    };
-};
+/ { keymap { compatible = "zmk,keymap"; default_layer { bindings = <
+&kp Q &kp W &kp E &kp R &kp T &kp Y
+&kp A &kp S &kp D &kp F &kp G &kp H
+&kp Z &kp X &kp C &kp V &kp B &kp N
+&kp LCTRL &kp SPACE &kp LSHFT
+>; }; }; };
