@@ -1,5 +1,2 @@
-config SHIELD_POCKETBOARD_LEFT
-    def_bool $(shields_list_contains,pocketboard_left)
-
-config SHIELD_POCKETBOARD_RIGHT
-    def_bool $(shields_list_contains,pocketboard_right)
+config SHIELD_POCKETBOARD
+    def_bool $(shields_list_contains,pocketboard)
