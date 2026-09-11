@@ -29,3 +29,7 @@ Commit: 84a348b08cf4fec4a5441a46147e9a345b10ffab
 
 ### HW1 v4
 This revision explicitly disables UART0 to reserve P0.06 and P0.08 for the MCP23017 I2C link.
+
+
+## v9.1
+Se eliminó el build `settings_reset` del diagnóstico porque el módulo de prueba I2C solo existe en el shield PocketBoard y hacía fallar el segundo job de GitHub Actions.

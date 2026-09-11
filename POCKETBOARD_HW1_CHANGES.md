@@ -32,3 +32,7 @@ Objetivo de esta versión: priorizar estabilidad del lado derecho antes que velo
 - Lee el registro IODIRA (0x00) del MCP23017 en 0x20 mediante i2c_write_read().
 - Informa FOUND / NO RESPONSE por USB logging cada 3 segundos.
 - Mantiene el hardware/pinout de v6: SDA=P0.06/D1, SCL=P0.08/D0.
+
+
+## v9.1
+Se eliminó el build `settings_reset` del diagnóstico porque el módulo de prueba I2C solo existe en el shield PocketBoard y hacía fallar el segundo job de GitHub Actions.
