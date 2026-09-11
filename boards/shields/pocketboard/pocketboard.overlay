@@ -6,6 +6,16 @@
  * Diodes are COL2ROW (cathode towards rows).
  */
 
+
+/*
+ * D0/P0.08 and D1/P0.06 are also the default UART0 RX/TX pins on
+ * nice!nano v2. PocketBoard uses those physical pins exclusively for I2C,
+ * so UART0 must stay disabled to avoid pin ownership conflicts at runtime.
+ */
+&uart0 {
+    status = "disabled";
+};
+
 /* I2C is physically wired on D1=P0.06 (SDA) and D0=P0.08 (SCL). */
 &pinctrl {
     pocketboard_i2c0_default: pocketboard_i2c0_default {

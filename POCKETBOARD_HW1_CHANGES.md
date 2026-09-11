@@ -12,3 +12,10 @@ Cambios frente a v2:
 - Conserva el combo de bootloader en las teclas 36 + 38.
 
 Objetivo de esta versión: priorizar estabilidad del lado derecho antes que velocidad máxima.
+
+
+## v4
+- UART0 explicitly disabled because nice!nano v2 defaults UART RX/TX to P0.08/P0.06, the exact pins PocketBoard uses for SCL/SDA.
+- I2C remains P0.06 SDA / P0.08 SCL at 100 kHz.
+- MCP23017 remains 0x20, GPA0-GPA5 columns, GPB0-GPB3 rows.
+- Left matrix and bootloader combo 36+38 unchanged.
