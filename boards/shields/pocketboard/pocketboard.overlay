@@ -30,7 +30,7 @@
     pinctrl-0 = <&pocketboard_i2c0_default>;
     pinctrl-1 = <&pocketboard_i2c0_sleep>;
     pinctrl-names = "default", "sleep";
-    clock-frequency = <400000>;
+    clock-frequency = <100000>;
 
     mcp23017: gpio@20 {
         compatible = "microchip,mcp230xx";
@@ -68,10 +68,10 @@
             , <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
 
-        debounce-press-ms = <3>;
-        debounce-release-ms = <3>;
+        debounce-press-ms = <5>;
+        debounce-release-ms = <5>;
         debounce-scan-period-ms = <1>;
-        poll-period-ms = <5>;
+        poll-period-ms = <10>;
     };
 
     /*
@@ -102,10 +102,10 @@
             , <&mcp23017 11 GPIO_ACTIVE_HIGH>
             ;
 
-        debounce-press-ms = <3>;
-        debounce-release-ms = <3>;
+        debounce-press-ms = <5>;
+        debounce-release-ms = <5>;
         debounce-scan-period-ms = <1>;
-        poll-period-ms = <5>;
+        poll-period-ms = <10>;
     };
 
     /*
