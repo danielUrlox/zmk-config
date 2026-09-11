@@ -1,28 +1,9 @@
-# PocketBoard HW1 - Firmware v3
+# PocketBoard-Corne-HW1 v10
 
-Cambios frente a v2:
-
-- Mantiene un solo nice!nano/nRF52840 en el lado izquierdo.
-- Mantiene MCP23017 en I2C 0x20 para el lado derecho.
-- SDA = D1 / P0.06 y SCL = D0 / P0.08.
-- Matriz derecha: GPA0..GPA5 = columnas y GPB0..GPB3 = filas.
-- Reduce I2C de 400 kHz a 100 kHz para mayor margen con TRRS y resistencias serie.
-- Agrega 1 tick de espera antes de leer inputs y entre columnas para el MCP23017.
-- Usa polling estable de 10 ms y debounce 5 ms.
-- Conserva el combo de bootloader en las teclas 36 + 38.
-
-Objetivo de esta versión: priorizar estabilidad del lado derecho antes que velocidad máxima.
-
-
-## v4
-- UART0 explicitly disabled because nice!nano v2 defaults UART RX/TX to P0.08/P0.06, the exact pins PocketBoard uses for SCL/SDA.
-- I2C remains P0.06 SDA / P0.08 SCL at 100 kHz.
-- MCP23017 remains 0x20, GPA0-GPA5 columns, GPB0-GPB3 rows.
-- Left matrix and bootloader combo 36+38 unchanged.
-
-
-## v6 - prueba I2C con pull-ups internos
-- Se mantienen SDA=P0.06/D1 y SCL=P0.08/D0.
-- UART0 sigue deshabilitado.
-- I2C a 100 kHz.
-- Se agrega `bias-pull-up;` al grupo pinctrl TWIM para usar los pull-ups internos del nRF52840 en SDA/SCL durante la prueba.
+- Base: v6 funcional del usuario.
+- MCP23017 configurado en 0x20.
+- Supuesto físico requerido: A0/A1/A2 de DIRECCIÓN unidos a GND.
+- Conservado: SDA P0.06, SCL P0.08, UART0 deshabilitado, I2C 100 kHz.
+- Conservado: izquierda C1..C6 = D4,D5,D6,D10,D8,D9; R1..R4 = D14,D15,D16,D18.
+- Conservado: derecha GPA0..5 columnas y GPB0..3 filas.
+- Eliminado del build principal: logging USB de diagnóstico.
