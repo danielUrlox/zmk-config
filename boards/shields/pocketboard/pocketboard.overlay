@@ -33,7 +33,7 @@
     clock-frequency = <400000>;
 
     mcp23017: gpio@20 {
-        compatible = "microchip,mcp23017";
+        compatible = "microchip,mcp230xx";
         reg = <0x20>;
         gpio-controller;
         #gpio-cells = <2>;

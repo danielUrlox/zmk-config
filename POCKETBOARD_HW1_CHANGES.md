@@ -29,3 +29,7 @@ Esto conserva el transform 8x12 y el orden de 42 teclas que produjo Shield Wizar
 Presionar simultáneamente las posiciones 36 y 38 (las dos teclas exteriores del grupo de 3 pulgares de la mitad izquierda) ejecuta `&bootloader`.
 
 Esto permite entrar al modo UF2 sin tocar RESET una vez que el firmware esté funcionando.
+
+
+## Build fix for Zephyr 3.5 / ZMK v0.3
+The Zephyr 3.5 tree used by this ZMK build exposes the MCP23017 family through the generic devicetree compatible `microchip,mcp230xx` (not the newer chip-specific `microchip,mcp23017`). The overlay was updated accordingly.
