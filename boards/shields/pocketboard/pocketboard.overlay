@@ -3,7 +3,7 @@
 /*
  * PocketBoard-Corne-HW1
  * One nice!nano v2 on the left + MCP23017 @ 0x20 on the right.
- * Left matrix = COL2ROW. Right matrix = ROW2COL (HW1 v8 test).
+ * Diodes are COL2ROW (cathode towards rows).
  */
 
 
@@ -98,11 +98,7 @@
      */
     kscan_right: kscan_right {
         compatible = "zmk,kscan-gpio-matrix";
-        /* HW1 v8 test: the right half diodes are physically mirrored
-         * compared with the left half, so scan this matrix in the
-         * opposite diode direction. Left half remains COL2ROW.
-         */
-        diode-direction = "row2col";
+        diode-direction = "col2row";
 
         col-gpios
             = <&mcp23017 0 GPIO_ACTIVE_HIGH>
