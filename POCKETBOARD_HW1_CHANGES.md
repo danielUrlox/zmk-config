@@ -19,3 +19,10 @@ Objetivo de esta versión: priorizar estabilidad del lado derecho antes que velo
 - I2C remains P0.06 SDA / P0.08 SCL at 100 kHz.
 - MCP23017 remains 0x20, GPA0-GPA5 columns, GPB0-GPB3 rows.
 - Left matrix and bootloader combo 36+38 unchanged.
+
+
+## v6 - prueba I2C con pull-ups internos
+- Se mantienen SDA=P0.06/D1 y SCL=P0.08/D0.
+- UART0 sigue deshabilitado.
+- I2C a 100 kHz.
+- Se agrega `bias-pull-up;` al grupo pinctrl TWIM para usar los pull-ups internos del nRF52840 en SDA/SCL durante la prueba.
