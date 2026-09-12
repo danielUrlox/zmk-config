@@ -1,8 +1,4 @@
 ---
 include:
-  - board: nice_nano_v2
-    shield: pocketboard
-    artifact-name: pocketboard_hw1_v10_mcp_0x20
-
-  - board: nice_nano_v2
-    shield: settings_reset
+  - board: nice_nano//zmk
+    shield: pocketboard_left

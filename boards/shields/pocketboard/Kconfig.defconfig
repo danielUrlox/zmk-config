@@ -1,6 +1,5 @@
-if SHIELD_POCKETBOARD
+if SHIELD_POCKETBOARD_LEFT
 
-# Name must be less than 16 characters long!
 config ZMK_KEYBOARD_NAME
     default "PocketBoard"
 
