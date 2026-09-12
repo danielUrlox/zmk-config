@@ -17,7 +17,7 @@
 static const struct device *const bus=DEVICE_DT_GET(DT_BUS(MCP_NODE));
 static struct k_work_delayable work;
 static bool stable[4][6], prev[4][6]; static uint8_t db[4][6];
-static const uint32_t keys[4][6]={{Y,U,I,O,P,BSPC},{H,J,K,L,SEMI,SQT},{N,M,COMMA,DOT,FSLH,RSHFT},{SPACE,ENTER,BSPC,0,0,0}};
+static const uint32_t keys[4][6]={{Y,U,I,O,P,BSPC},{H,J,K,L,SEMI,SQT},{N,M,COMMA,DOT,FSLH,RSHFT},{0,0,0,SPACE,ENTER,BSPC}};
 static int wr(uint8_t r,uint8_t v){uint8_t d[2]={r,v};return i2c_write(bus,d,2,MCP_ADDR);}
 static int rd(uint8_t r,uint8_t *v){return i2c_write_read(bus,MCP_ADDR,&r,1,v,1);}
 static void emit(uint32_t k,bool down){if(k!=0)raise_zmk_keycode_state_changed_from_encoded(k,down,k_uptime_get());}
